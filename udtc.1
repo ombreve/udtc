@@ -1,0 +1,40 @@
+.TH UDTC 1
+.SH NAME
+udtc \- UTF8 Double Transposition Cipher
+.SH SYNOPSIS
+.ad l
+.nh
+.HP 5
+.B udtc
+[\fB-1Vde\fR]
+[\fB\-o\fR\ \fIfile\fR]
+[\fB\-\-help\fR]
+[\fIfile\fR]
+.SH DESCRIPTION
+.B udtc
+encodes UTF8 text files with a double transposition cipher.
+Keys are sequences of ASCII characters.
+.PP
+\fBWarning\fR: because of the way the algorithm works, the whole input
+has to be read in memory before processing.
+.SH OPTIONS
+.TP
+\fB\-1\fR, \fB\-\-simple\fR
+Use a simple transposition.
+.TP
+\fB\-d\fB, \fB\-\-decrypt\fR
+Decrypt the input file.
+If no filename is given, decrypt standard input.
+.TP
+\fB\-e\fB, \fB\-\-encrypt\fR
+Encrypt the input file (default).
+If no input file is given, encrypt standard input.
+.TP
+\fB\-o\fIfile\fR, \fB\-\-output\fR=\fIfile\fR
+Set the output file. By default output goes to standard output.
+.TP
+\fB\-\-help\fR
+Print a synopsis of the command line interface.
+.TP
+\fB\-V\fB, \fB\-\-version\fR
+Print version information.
